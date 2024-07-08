@@ -1,0 +1,92 @@
+h1{
+    text-align: center;
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#shopInput{
+    text-align: center;
+}
+
+input{
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px; /* Width of the input box */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 80px;
+}
+
+li {
+    background: #eee;
+    margin: 5px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.addButton{
+    background-color: rgb(219, 126, 219);
+    border-radius:10px;
+    padding:10px;
+    width: 60px;
+    border: 1.5px;
+    
+    
+}
+
+.clearList{
+    background-color: rgb(219, 126, 219);
+    border-radius:10px;
+    height:35px;
+    width: 70px;
+    border: 1.5px;
+    margin-left: 10px;
+    
+    
+}
+
+
+
+
+.deleteButton{
+    background-color:rgb(219, 126, 219);
+    position: absolute;
+    border:1px;
+    padding: 5px;
+    width: 60px;
+    margin-right: 30px;
+    
+}
+
+.purchased{
+
+    background-color: rgb(57, 205, 52);
+    
+}
+
+
+
+#shop-container{
+    width:650px;
+    height: 480px;
+    margin:60px auto;
+    color:black;
+    padding: 20px;
+    box-shadow: 0 10px 20px;
+    border-radius: 10px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    margin-left:150px;
+}
+
+.container img{
+    margin-right:10px;
+    
+
+}
+
