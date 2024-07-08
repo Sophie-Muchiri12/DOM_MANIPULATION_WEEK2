@@ -1,7 +1,7 @@
-const shopInput = document.getElementById('shopInput')  // creating a variable that references to the id 
-const clearButton = document.getElementsByClassName('clearList') [0]// creating a variable that references to the clas
- const shopList = document.getElementById('shopList') // creating a variable that references to the id 
- const addButton = document.getElementsByClassName('addButton')[0] // creating a variable that references to the class
+const shopInput = document.getElementById('shopInput')  // creating a variable that references to the id of input for easier manipulation throughout the DOM
+const clearButton = document.getElementsByClassName('clearList') [0]// creating a variable that references to the class for easier manipulation throughout the DOM
+ const shopList = document.getElementById('shopList') // creating a variable that references to the id for easier manipulation throughout the DOM
+ const addButton = document.getElementsByClassName('addButton')[0] // creating a variable that references to the class for easier manipulation throughout the DOM
  
 
 
@@ -14,7 +14,7 @@ function addshopping(){
    shopList.innerHTML = '' //sets the shopping list to be initially empty
 
    shoppingArray.forEach( // iterates through each object in the shopping array with every iteration creates li element,
-     function(item,index){// 'itemName'a span for the name of the item, 'deleteButton' and 'purchased button'
+     function(item,index){// 'itemName' a span for the name of the item, 'deleteButton' and 'purchased button'
 
         const li = document.createElement('li')
         const itemName = document.createElement('span')
@@ -30,7 +30,7 @@ deleteButton.className = 'deleteButton'
 purchasedButton.textContent = item.purchased ? 'purchased' : 'mark purchased'//checks whether item.purchased is true if it is true
 //then text will be purchased otherwise it will remain mark purchased
 purchasedButton.className = 'purchased'
-deleteButton.style.marginLeft = '350px'
+deleteButton.style.marginLeft = '350px'  //styling
 
 if(item.purchased){          //checks whether item.purchased is true if it is true
                             //then text will be purchased otherwise it will remain mark purchased
@@ -50,14 +50,14 @@ shopList.appendChild(li)
 // PURCHASED BUTTON EVENT LISTENER
 purchasedButton.addEventListener('click',function(){
     
-    shoppingArray[index].purchased = !shoppingArray[index].purchased
+    shoppingArray[index].purchased = !shoppingArray[index].purchased   //toggles the purchased status of the item at index in shoppingArray
     
 
     addshopping()
 })
 
 // DELETE EVENT LISTENER
-deleteButton.addEventListener('click',function(){
+deleteButton.addEventListener('click',function(){    //removes the item from shoppingArray using the splice() method
     shoppingArray.splice(index,1)
     addshopping()
 })
@@ -70,7 +70,7 @@ deleteButton.addEventListener('click',function(){
 
 function additems(){
     const inputValue = shopInput.value.trim()
-    if(inputValue === ''){
+    if(inputValue === ''){  // if empty input then exit the function immediately (using the return)
         return
     }
 
